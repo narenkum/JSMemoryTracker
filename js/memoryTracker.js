@@ -1,10 +1,25 @@
 "use strict"
 
-const arrLength = 200; // 2GB(200 * 10MB)
-const subArrLength = 10000000; // 10MB
-const MB = 1000000;
-const progressInterval = 10000000;
-const arr = [...Array(arrLength)].map(x => []);
+var urlParams = new URLSearchParams(window.location.search);
+
+var slowAllocation = false;
+
+if (urlParams.has("slow")) {
+    slowAllocation = true;
+}
+
+var arrLength = 200; // 2GB(200 * 10MB)
+var subArrLength = 10000000; // 10MB
+var progressInterval = 10000000;
+var MB = 1000000;
+
+if (slowAllocation) {
+    arrLength = 500; // 500MB (500 * 1MB)
+    subArrLength = 1000000; // 1MB
+    progressInterval = 1000000;
+}
+
+var arr = [...Array(arrLength)].map(x => []);
 var counter = 0;
 var totalAllocatedMem = 0;
 
