@@ -14,12 +14,14 @@ function allocate(mem, counter) {
         subArr[i-1] = (i-1);
         totalAllocatedMem++;
         if (i%progressInterval === 0) {
-            document.getElementById("allocatedMem").value = (totalAllocatedMem)/MB;;
+            document.getElementById("allocatedMem").value = (totalAllocatedMem)/MB;
             document.getElementById("myProgress").value = (totalAllocatedMem/(arrLength*subArrLength))*100;
         }
     }
     if (++counter === arrLength) {
-        console.log("Completed!!!");
+        setTimeout(()=>{
+            window.alert("Allocation of " + document.getElementById("allocatedMem").value + "MB complete!");
+        }, 100);
         return;
     }
     setTimeout(()=>{
@@ -34,5 +36,5 @@ window.onload = function () {
 }
 
 window.onerror = function () {
-    console.log("window onerror, totalAllocatedMem:", totalAllocatedMem);
+    window.alert("Allocation failed, allocated " + document.getElementById("allocatedMem").value + "MB.");
 }
