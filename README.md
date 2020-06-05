@@ -7,3 +7,6 @@ Maximum numbers it tries to allocate is 2GB.
 Page crashes/reloads when used JS heap size exceeds max available limit.
 
 Allocation URL: https://narenkum.github.io/JSMemoryTracker
+
+To test on low-end devices pass "slow" flag which wil allocates memory in slow rate.
+  e.g https://narenkum.github.io/JSMemoryTracker?slow
