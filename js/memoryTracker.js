@@ -14,7 +14,7 @@ var progressInterval = 10000000;
 var MB = 1000000;
 
 if (slowAllocation) {
-    arrLength = 500; // 500MB (500 * 1MB)
+    arrLength = 1000; // 1GB (1000 * 1MB)
     subArrLength = 1000000; // 1MB
     progressInterval = 1000000;
 }
