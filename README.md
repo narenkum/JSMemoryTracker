@@ -13,3 +13,4 @@ To test on low-end devices pass "slow" flag which will allocate memory in slow p
   
   Testing git revert->
   adding new commit + 1
+  adding new commit + 2
