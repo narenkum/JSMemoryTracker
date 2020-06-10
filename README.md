@@ -10,6 +10,3 @@ Allocation URL: https://narenkum.github.io/JSMemoryTracker
 
 To test on low-end devices pass "slow" flag which will allocate memory in slow pace.
   e.g https://narenkum.github.io/JSMemoryTracker?slow
-
-
-Test commit changes.
