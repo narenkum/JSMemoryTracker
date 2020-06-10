@@ -8,5 +8,5 @@ Page crashes/reloads when Used JS heap size exceeds max defined limit.
 
 Allocation URL: https://narenkum.github.io/JSMemoryTracker
 
-To test on low-end devices pass "slow" flag which wil allocates memory in slow rate.
+To test on low-end devices pass "slow" flag which will allocate memory in slow pace.
   e.g https://narenkum.github.io/JSMemoryTracker?slow
